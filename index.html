@@ -811,6 +811,12 @@
           <!-- Right: Contact Form -->
           <div class="contact-form-card">
             <form id="contact-form" autocomplete="off">
+              <div class="db-status-badge">
+                <span class="status-dot"></span>
+                <span id="db-status-text">Database Integrated (Supabase / Local)</span>
+                <button type="button" id="view-inbox-btn" class="btn btn-outline btn-sm" style="padding: 0.2rem 0.6rem; font-size: 0.75rem; margin-left: 0.5rem; cursor: pointer;">View Inbox</button>
+              </div>
+
               <div class="form-group">
                 <label for="form-name" class="form-label">Your Name</label>
                 <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Sarah Connor"
@@ -889,6 +895,30 @@
     </div>
   </div>
 
+  <!-- Admin Inbox & Database Submissions Modal -->
+  <div class="modal-backdrop" id="inbox-modal" role="dialog" aria-modal="true" aria-labelledby="inbox-modal-title">
+    <div class="modal-content" style="max-width: 700px;">
+      <button class="modal-close-btn" id="inbox-modal-close-btn" aria-label="Close Inbox Modal">✕</button>
+      <div class="modal-body">
+        <div style="display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border-subtle); padding-bottom: 1rem;">
+          <div>
+            <h3 id="inbox-modal-title" style="font-size: 1.4rem;">📬 Contact Messages Database</h3>
+            <p style="font-size: 0.85rem; color: var(--text-secondary); margin-top: 0.25rem;">Stored messages received through the contact form.</p>
+          </div>
+          <button type="button" id="clear-inbox-btn" class="btn btn-outline btn-sm" style="color: #ef4444; border-color: rgba(239, 68, 68, 0.4);">Clear All</button>
+        </div>
+
+        <div id="inbox-list" class="inbox-list">
+          <!-- Dynamically populated messages -->
+        </div>
+
+        <div style="border-top: 1px solid var(--border-subtle); padding-top: 1rem; font-size: 0.825rem; color: var(--text-muted);">
+          <p>💡 <strong>Supabase Cloud Sync:</strong> To sync messages to your Supabase PostgreSQL cloud table, enter your credentials in <code class="font-mono">js/db-config.js</code> and run <code class="font-mono">database_setup.sql</code> in your Supabase SQL Editor.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <!-- Toast Notification Container -->
   <div class="toast-container" id="toast-container" aria-live="polite"></div>
 
@@ -920,6 +950,11 @@
   </footer>
 
   <!-- Scripts -->
+  <!-- Supabase Cloud Database Client SDK -->
+  <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+  <!-- Database Configuration & Service -->
+  <script src="js/db-config.js"></script>
+  <!-- Main Application Logic -->
   <script src="js/main.js"></script>
 </body>
 

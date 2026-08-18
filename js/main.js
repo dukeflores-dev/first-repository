@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
   initSkillsFilter();
   initProjects();
   initContactForm();
+  initInboxModal();
   initCurrentYear();
 });
 
@@ -537,14 +538,23 @@ function initProjects() {
 }
 
 /* ==========================================================================
-   8. Contact Form Validation & Toast Notification
+   8. Contact Form Database Integration & Validation
    ========================================================================== */
 function initContactForm() {
   const form = document.getElementById('contact-form');
   const submitBtn = document.getElementById('submit-btn');
-  const feedback = document.getElementById('form-feedback');
 
-  form?.addEventListener('submit', (e) => {
+  // Update Database status indicator
+  const dbStatusText = document.getElementById('db-status-text');
+  if (dbStatusText && window.dbService) {
+    if (window.dbService.isCloudEnabled) {
+      dbStatusText.textContent = 'Database: Supabase Cloud (Live)';
+    } else {
+      dbStatusText.textContent = 'Database: Local & Cloud Ready';
+    }
+  }
+
+  form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
     const name = form.elements['name']?.value.trim();
@@ -571,15 +581,108 @@ function initContactForm() {
       <svg class="animate-spin" width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" style="animation: spin 1s linear infinite;">
         <circle cx="12" cy="12" r="10" stroke-dasharray="32" stroke-dashoffset="10"/>
       </svg>
-      Sending message...
+      Saving to database...
     `;
 
-    setTimeout(() => {
+    try {
+      // Save directly to database
+      const result = await window.dbService.saveMessage({ name, email, subject, message });
+
       submitBtn.disabled = false;
       submitBtn.innerHTML = originalText;
       form.reset();
-      showToast('🚀 Thank you! Your message has been sent successfully.', 'success');
-    }, 1200);
+
+      if (result.method === 'cloud') {
+        showToast('🚀 Message saved directly to Supabase Cloud Database!', 'success');
+      } else {
+        showToast('💾 Message saved to database successfully!', 'success');
+      }
+    } catch (err) {
+      submitBtn.disabled = false;
+      submitBtn.innerHTML = originalText;
+      showToast('⚠️ Saved locally. Error connecting to cloud: ' + err.message, 'warning');
+    }
+  });
+}
+
+/* ==========================================================================
+   8.1 Admin Inbox Modal & Submissions Viewer
+   ========================================================================== */
+function initInboxModal() {
+  const viewInboxBtn = document.getElementById('view-inbox-btn');
+  const inboxModal = document.getElementById('inbox-modal');
+  const closeInboxBtn = document.getElementById('inbox-modal-close-btn');
+  const clearInboxBtn = document.getElementById('clear-inbox-btn');
+  const inboxList = document.getElementById('inbox-list');
+
+  if (!viewInboxBtn || !inboxModal) return;
+
+  function renderInbox() {
+    if (!inboxList) return;
+    const messages = window.dbService ? window.dbService.getLocalMessages() : [];
+
+    if (messages.length === 0) {
+      inboxList.innerHTML = `
+        <div class="inbox-empty">
+          <p style="font-size: 2rem; margin-bottom: 0.5rem;">📭</p>
+          <p>No messages stored yet.</p>
+          <p style="font-size: 0.8rem; margin-top: 0.35rem;">Submit a message via the contact form to test database storage!</p>
+        </div>
+      `;
+      return;
+    }
+
+    inboxList.innerHTML = messages.map(msg => {
+      const dateStr = new Date(msg.created_at).toLocaleString();
+      return `
+        <div class="inbox-card">
+          <div class="inbox-card-header">
+            <span class="inbox-sender-name">${escapeHTML(msg.name)}</span>
+            <span class="inbox-timestamp">${dateStr}</span>
+          </div>
+          <a href="mailto:${escapeHTML(msg.email)}" class="inbox-email">${escapeHTML(msg.email)}</a>
+          <div class="inbox-subject">📌 ${escapeHTML(msg.subject)}</div>
+          <div class="inbox-body">${escapeHTML(msg.message)}</div>
+        </div>
+      `;
+    }).join('');
+  }
+
+  function escapeHTML(str) {
+    if (!str) return '';
+    return str.replace(/[&<>'"]/g, tag => ({
+      '&': '&amp;',
+      '<': '&lt;',
+      '>': '&gt;',
+      "'": '&#39;',
+      '"': '&quot;'
+    }[tag] || tag));
+  }
+
+  viewInboxBtn.addEventListener('click', () => {
+    renderInbox();
+    inboxModal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+  });
+
+  closeInboxBtn?.addEventListener('click', () => {
+    inboxModal.classList.remove('active');
+    document.body.style.overflow = '';
+  });
+
+  inboxModal.addEventListener('click', (e) => {
+    if (e.target === inboxModal) {
+      inboxModal.classList.remove('active');
+      document.body.style.overflow = '';
+    }
+  });
+
+  clearInboxBtn?.addEventListener('click', () => {
+    if (confirm('Are you sure you want to clear all stored messages?')) {
+      if (window.dbService) window.dbService.clearLocalMessages();
+      renderInbox();
+      showToast('🗑️ All local database messages cleared.', 'info');
+    }
   });
 }
 

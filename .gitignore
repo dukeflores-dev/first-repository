@@ -1,0 +1,14 @@
+# Environment & Sensitive Config
+.env
+.env.local
+.env.*.local
+
+# Supabase & API keys
+js/db-config.js
+js/db-config.local.js
+
+# OS / Editor files
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
