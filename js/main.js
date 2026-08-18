@@ -164,10 +164,8 @@ function initTypingEffect() {
   if (!target) return;
 
   const roles = [
-    'Full-Stack Software Engineer',
-    'Cloud & DevOps Architect',
-    'Creative UI/UX Developer',
-    'High-Performance Systems Builder'
+    'IT Student',
+    'Musician'
   ];
 
   let roleIdx = 0;
