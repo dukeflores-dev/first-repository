@@ -20,7 +20,7 @@
   --bg-card: rgba(15, 23, 42, 0.72);
   --bg-card-hover: rgba(22, 34, 62, 0.85);
   --bg-glass: rgba(13, 20, 36, 0.75);
-  
+
   --border-subtle: rgba(255, 255, 255, 0.08);
   --border-glow: rgba(0, 242, 254, 0.35);
   --border-focus: #00f2fe;
@@ -55,7 +55,7 @@
   --radius-md: 14px;
   --radius-lg: 20px;
   --radius-full: 9999px;
-  
+
   --transition-fast: 0.2s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-normal: 0.35s cubic-bezier(0.16, 1, 0.3, 1);
   --transition-slow: 0.6s cubic-bezier(0.16, 1, 0.3, 1);
@@ -72,7 +72,7 @@
   --bg-card: rgba(255, 255, 255, 0.85);
   --bg-card-hover: rgba(255, 255, 255, 0.98);
   --bg-glass: rgba(255, 255, 255, 0.85);
-  
+
   --border-subtle: rgba(0, 0, 0, 0.08);
   --border-glow: rgba(14, 165, 233, 0.4);
   --border-focus: #0284c7;
@@ -85,7 +85,7 @@
   --accent-cyan: #0284c7;
   --accent-blue: #2563eb;
   --accent-purple: #7c3aed;
-  
+
   --grad-primary: linear-gradient(135deg, #0284c7 0%, #2563eb 50%, #7c3aed 100%);
   --grad-surface: linear-gradient(180deg, rgba(255, 255, 255, 0.9) 0%, rgba(255, 255, 255, 0.7) 100%);
   --grad-card-glow: radial-gradient(circle at 50% 0%, rgba(2, 132, 199, 0.1), transparent 70%);
@@ -115,7 +115,9 @@
 }
 
 /* --- Base & Reset --- */
-*, *::before, *::after {
+*,
+*::before,
+*::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -144,14 +146,17 @@ body {
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb {
   background: var(--bg-tertiary);
   border-radius: var(--radius-full);
   border: 2px solid var(--bg-primary);
 }
+
 ::-webkit-scrollbar-thumb:hover {
   background: var(--accent-cyan);
 }
@@ -168,7 +173,12 @@ body {
 }
 
 /* Typography Helpers */
-h1, h2, h3, h4, h5, h6 {
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
   font-family: var(--font-heading);
   color: var(--text-primary);
   line-height: 1.2;
@@ -189,7 +199,10 @@ ul {
   list-style: none;
 }
 
-button, input, textarea, select {
+button,
+input,
+textarea,
+select {
   font-family: inherit;
   font-size: inherit;
   border: none;
@@ -402,9 +415,11 @@ section {
 .mobile-menu-btn.active span:nth-child(1) {
   transform: translateY(7px) rotate(45deg);
 }
+
 .mobile-menu-btn.active span:nth-child(2) {
   opacity: 0;
 }
+
 .mobile-menu-btn.active span:nth-child(3) {
   transform: translateY(-7px) rotate(-45deg);
 }
@@ -525,8 +540,15 @@ section {
 }
 
 @keyframes pulse-ring {
-  0% { transform: scale(0.7); opacity: 1; }
-  100% { transform: scale(1.8); opacity: 0; }
+  0% {
+    transform: scale(0.7);
+    opacity: 1;
+  }
+
+  100% {
+    transform: scale(1.8);
+    opacity: 0;
+  }
 }
 
 .hero-title {
@@ -555,8 +577,15 @@ section {
 }
 
 @keyframes blink {
-  0%, 100% { opacity: 1; }
-  50% { opacity: 0; }
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0;
+  }
 }
 
 .hero-description {
@@ -663,15 +692,38 @@ section {
   border-radius: 50%;
 }
 
-.dot-red { background: #ef4444; }
-.dot-yellow { background: #f59e0b; }
-.dot-green { background: #10b981; }
+.dot-red {
+  background: #ef4444;
+}
 
-.code-token-keyword { color: #f43f5e; }
-.code-token-var { color: #00f2fe; }
-.code-token-prop { color: #a855f7; }
-.code-token-string { color: #10b981; }
-.code-token-comment { color: #64748b; font-style: italic; }
+.dot-yellow {
+  background: #f59e0b;
+}
+
+.dot-green {
+  background: #10b981;
+}
+
+.code-token-keyword {
+  color: #f43f5e;
+}
+
+.code-token-var {
+  color: #00f2fe;
+}
+
+.code-token-prop {
+  color: #a855f7;
+}
+
+.code-token-string {
+  color: #10b981;
+}
+
+.code-token-comment {
+  color: #64748b;
+  font-style: italic;
+}
 
 .floating-badge {
   position: absolute;
@@ -701,8 +753,15 @@ section {
 }
 
 @keyframes float {
-  0%, 100% { transform: translateY(0px); }
-  50% { transform: translateY(-10px); }
+
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
 }
 
 /* --- Stats Strip --- */
@@ -1452,8 +1511,15 @@ section {
 }
 
 @keyframes slide-in {
-  from { transform: translateX(100%); opacity: 0; }
-  to { transform: translateX(0); opacity: 1; }
+  from {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+
+  to {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
 /* --- Footer --- */
