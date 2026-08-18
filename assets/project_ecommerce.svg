@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450" width="100%" height="100%">
+  <defs>
+    <linearGradient id="bgGrad3" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#11071f"/>
+      <stop offset="50%" stop-color="#180b2b"/>
+      <stop offset="100%" stop-color="#0a0314"/>
+    </linearGradient>
+    <linearGradient id="neonPinkViolet" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#ec4899"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="glowPink" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="10" result="blur" />
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <rect width="800" height="450" fill="url(#bgGrad3)"/>
+  
+  <!-- Glowing background orbs -->
+  <circle cx="200" cy="200" r="160" fill="#ec4899" fill-opacity="0.15" filter="url(#glowPink)"/>
+  <circle cx="600" cy="250" r="180" fill="#8b5cf6" fill-opacity="0.18" filter="url(#glowPink)"/>
+
+  <!-- Main Showcase Box -->
+  <rect x="60" y="45" width="680" height="360" rx="16" fill="rgba(24, 11, 43, 0.75)" stroke="rgba(236, 72, 153, 0.35)" stroke-width="1.5"/>
+
+  <!-- Header -->
+  <text x="100" y="88" fill="#ffffff" font-size="20" font-weight="800" font-family="sans-serif">CyberPulse 3D Studio</text>
+  <rect x="580" y="68" width="130" height="28" rx="14" fill="rgba(236, 72, 153, 0.2)" stroke="#ec4899" stroke-width="1"/>
+  <text x="645" y="86" fill="#ec4899" font-size="12" font-weight="700" text-anchor="middle" font-family="sans-serif">THREE.JS / WEBGL</text>
+
+  <!-- Central 3D Showcase Graphic -->
+  <g transform="translate(140, 110)">
+    <!-- Isometric Platform -->
+    <polygon points="260,180 440,240 260,300 80,240" fill="rgba(139, 92, 246, 0.2)" stroke="rgba(236, 72, 153, 0.5)" stroke-width="2"/>
+    <polygon points="260,180 440,240 440,255 260,195" fill="rgba(139, 92, 246, 0.4)"/>
+    <polygon points="260,195 440,255 260,315 80,255" fill="none" stroke="rgba(0, 242, 254, 0.6)" stroke-width="1.5"/>
+
+    <!-- Glowing Cyber Sneaker Silhouette / Hologram -->
+    <path d="M 170 180 Q 220 130, 280 150 T 360 170 Q 380 190, 350 205 L 290 215 Q 230 220, 180 205 Z" 
+          fill="url(#neonPinkViolet)" stroke="#ffffff" stroke-width="2" filter="url(#glowPink)"/>
+
+    <!-- Coordinate Ring -->
+    <ellipse cx="260" cy="180" rx="140" ry="60" fill="none" stroke="rgba(0, 242, 254, 0.4)" stroke-width="1.5" stroke-dasharray="6,6"/>
+  </g>
+
+  <!-- Left Stats Overlay -->
+  <rect x="90" y="270" width="180" height="100" rx="10" fill="rgba(14, 7, 26, 0.85)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="105" y="295" fill="#94a3b8" font-size="11" font-family="sans-serif">RENDER ENGINE</text>
+  <text x="105" y="325" fill="#ffffff" font-size="18" font-weight="700" font-family="sans-serif">60 FPS WebGL</text>
+  <text x="105" y="350" fill="#10b981" font-size="12" font-family="sans-serif">⚡ Shader Optimized</text>
+
+  <!-- Right Price Card -->
+  <rect x="520" y="270" width="190" height="100" rx="10" fill="rgba(14, 7, 26, 0.85)" stroke="rgba(255,255,255,0.08)" stroke-width="1"/>
+  <text x="535" y="295" fill="#94a3b8" font-size="11" font-family="sans-serif">INTERACTIVE DEMO</text>
+  <text x="535" y="325" fill="#ec4899" font-size="20" font-weight="800" font-family="sans-serif">Spatial 360°</text>
+  <text x="535" y="350" fill="#94a3b8" font-size="12" font-family="sans-serif">Real-time lighting &amp; PBR</text>
+</svg>

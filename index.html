@@ -1,0 +1,863 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <!-- Primary Meta Tags -->
+  <title>Duke Flores | Full-Stack Software Engineer &amp; Creative Technologist</title>
+  <meta name="title" content="Duke Flores | Full-Stack Software Engineer & Creative Technologist">
+  <meta name="description" content="Personal portfolio of Duke Flores, a Full-Stack Software Engineer specializing in modern web applications, cloud architecture, and high-performance user experiences.">
+  <meta name="keywords" content="Duke Flores, Software Engineer, Full Stack Developer, Web Development, React, Node.js, Cloud Architect, UI/UX, TypeScript, Python">
+  <meta name="author" content="Duke Flores">
+  <meta name="theme-color" content="#070b14">
+
+  <!-- Open Graph / Facebook -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://dukeflores-dev.github.io/first-repository/">
+  <meta property="og:title" content="Duke Flores | Full-Stack Software Engineer">
+  <meta property="og:description" content="Crafting scalable cloud architectures, high-performance web applications, and intuitive digital experiences.">
+  <meta property="og:image" content="assets/project_ai_saas.jpg">
+
+  <!-- Twitter -->
+  <meta property="twitter:card" content="summary_large_image">
+  <meta property="twitter:title" content="Duke Flores | Full-Stack Software Engineer">
+  <meta property="twitter:description" content="Crafting scalable cloud architectures, high-performance web applications, and intuitive digital experiences.">
+  <meta property="twitter:image" content="assets/project_ai_saas.jpg">
+
+  <!-- Stylesheet -->
+  <link rel="stylesheet" href="styles/main.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+</head>
+<body>
+
+  <!-- Interactive Background Particle Canvas -->
+  <canvas id="particle-canvas"></canvas>
+
+  <!-- Navigation Bar -->
+  <header class="navbar" id="navbar">
+    <div class="container nav-container">
+      <a href="#hero" class="nav-logo" aria-label="Duke Flores Home">
+        <span class="logo-badge">DF</span>
+        <span>Duke Flores</span>
+      </a>
+
+      <!-- Desktop Navigation Links -->
+      <nav class="nav-menu" id="nav-menu" aria-label="Main Navigation">
+        <a href="#hero" class="nav-link active">Home</a>
+        <a href="#about" class="nav-link">About</a>
+        <a href="#skills" class="nav-link">Skills</a>
+        <a href="#projects" class="nav-link">Projects</a>
+        <a href="#experience" class="nav-link">Experience</a>
+        <a href="#contact" class="nav-link">Contact</a>
+      </nav>
+
+      <!-- Nav Actions & Mobile Toggle -->
+      <div class="nav-actions">
+        <button class="theme-toggle-btn" id="theme-toggle" aria-label="Toggle Color Theme" title="Toggle Theme (Dark / Light / Midnight)">
+          <span id="theme-icon">🌙</span>
+        </button>
+
+        <a href="#contact" class="btn btn-primary btn-sm" style="display: none;">Let's Talk</a>
+
+        <button class="mobile-menu-btn" id="mobile-menu-btn" aria-label="Toggle Mobile Menu">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- Hero Section -->
+    <section class="hero-section" id="hero">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="status-badge">
+            <span class="status-dot"></span>
+            <span>Available for New Opportunities</span>
+          </div>
+
+          <h1 class="hero-title">
+            Hi, I'm <span class="gradient-text">Duke Flores</span>
+          </h1>
+
+          <div class="hero-subtitle">
+            <span>Specializing in</span>
+            <span class="gradient-text-alt" id="typing-text">Full-Stack Software Engineering</span>
+            <span class="typing-cursor">&nbsp;</span>
+          </div>
+
+          <p class="hero-description">
+            Building robust cloud systems, interactive high-performance web applications, and seamless digital products that bridge engineering rigor with modern aesthetics.
+          </p>
+
+          <div class="hero-actions">
+            <a href="#projects" class="btn btn-primary">
+              <span>Explore Projects</span>
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12 5 19 12 12 19"></polyline>
+              </svg>
+            </a>
+
+            <a href="#contact" class="btn btn-secondary">
+              <span>Get in Touch</span>
+            </a>
+
+            <a href="#about" class="btn btn-outline">
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M21 15v4a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-4"></path>
+                <polyline points="7 10 12 15 17 10"></polyline>
+                <line x1="12" y1="15" x2="12" y2="3"></line>
+              </svg>
+              <span>Download CV</span>
+            </a>
+          </div>
+
+          <div class="hero-socials">
+            <a href="https://github.com/dukeflores-dev" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="GitHub Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path>
+              </svg>
+            </a>
+
+            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="LinkedIn Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"></path>
+                <rect x="2" y="9" width="4" height="12"></rect>
+                <circle cx="4" cy="4" r="2"></circle>
+              </svg>
+            </a>
+
+            <a href="https://twitter.com" target="_blank" rel="noopener noreferrer" class="social-pill" aria-label="Twitter / X Profile">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M23 3a10.9 10.9 0 0 1-3.14 1.53 4.48 4.48 0 0 0-7.86 3v1A10.66 10.66 0 0 1 3 4s-4 9 5 13a11.64 11.64 0 0 1-7 2c9 5 20 0 20-11.5a4.5 4.5 0 0 0-.08-.83A7.72 7.72 0 0 0 23 3z"></path>
+              </svg>
+            </a>
+
+            <a href="mailto:dukeflores.dev@gmail.com" class="social-pill" aria-label="Email Duke Flores">
+              <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                <polyline points="22,6 12,13 2,6"></polyline>
+              </svg>
+            </a>
+          </div>
+        </div>
+
+        <!-- Hero Visual / Code Frame -->
+        <div class="hero-visual">
+          <div class="hero-card-frame">
+            <div class="code-mockup">
+              <div class="code-mockup-header">
+                <div class="window-dots">
+                  <span class="dot-red"></span>
+                  <span class="dot-yellow"></span>
+                  <span class="dot-green"></span>
+                </div>
+                <span>engineer.ts</span>
+              </div>
+              <pre><code><span class="code-token-keyword">const</span> <span class="code-token-var">developer</span> = {
+  <span class="code-token-prop">name</span>: <span class="code-token-string">'Duke Flores'</span>,
+  <span class="code-token-prop">role</span>: <span class="code-token-string">'Senior Full-Stack Engineer'</span>,
+  <span class="code-token-prop">location</span>: <span class="code-token-string">'Remote / Worldwide'</span>,
+  <span class="code-token-prop">coreStack</span>: [
+    <span class="code-token-string">'TypeScript'</span>, <span class="code-token-string">'React'</span>,
+    <span class="code-token-string">'Node.js'</span>, <span class="code-token-string">'Python'</span>,
+    <span class="code-token-string">'Docker'</span>, <span class="code-token-string">'AWS'</span>
+  ],
+  <span class="code-token-prop">passion</span>: <span class="code-token-string">'High-Performance Apps'</span>,
+  <span class="code-token-prop">hireable</span>: <span class="code-token-keyword">true</span>
+};</code></pre>
+            </div>
+
+            <!-- Floating Highlights -->
+            <div class="floating-badge badge-top">
+              <span>🚀</span>
+              <span>100% Code Quality</span>
+            </div>
+
+            <div class="floating-badge badge-bottom">
+              <span>⚡</span>
+              <span>Sub-50ms Latency</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Stats Strip -->
+    <section class="stats-strip" aria-label="Key Achievements and Statistics">
+      <div class="container">
+        <div class="stats-grid">
+          <div class="stat-item">
+            <div class="stat-number" data-target="5" data-suffix="+">0</div>
+            <div class="stat-label">Years of Experience</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="45" data-suffix="+">0</div>
+            <div class="stat-label">Projects Completed</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="99.8" data-suffix="%" data-decimals="1">0</div>
+            <div class="stat-label">Client Satisfaction</div>
+          </div>
+          <div class="stat-item">
+            <div class="stat-number" data-target="15" data-suffix="+">0</div>
+            <div class="stat-label">Open Source Packages</div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">About Me</div>
+          <h2 class="section-title">Driven by Curiosity, Defined by Craft</h2>
+          <p class="section-desc">Passionate about turning intricate architectural problems into clean, intuitive, and blisteringly fast user experiences.</p>
+        </div>
+
+        <div class="about-grid">
+          <div class="about-image-card">
+            <div class="about-card-inner">
+              <div style="text-align: center; margin-bottom: 1.5rem;">
+                <img src="assets/avatar.svg" alt="Duke Flores Developer Avatar" style="width: 170px; height: 170px; border-radius: 50%; box-shadow: var(--shadow-glow);">
+                <h3 style="margin-top: 1rem; font-size: 1.35rem;">Duke Flores</h3>
+                <p class="font-mono" style="color: var(--accent-cyan); font-size: 0.85rem;">@dukeflores-dev</p>
+              </div>
+
+              <div class="about-points">
+                <div class="about-point-box">
+                  <span class="about-point-icon">⚡</span>
+                  <span class="about-point-title">Speed First</span>
+                  <span class="about-point-desc">Optimized rendering &amp; asset delivery</span>
+                </div>
+                <div class="about-point-box">
+                  <span class="about-point-icon">🛡️</span>
+                  <span class="about-point-title">Bulletproof</span>
+                  <span class="about-point-desc">Clean, strictly-typed testable code</span>
+                </div>
+                <div class="about-point-box">
+                  <span class="about-point-icon">🌐</span>
+                  <span class="about-point-title">Scalable</span>
+                  <span class="about-point-desc">Cloud native microservices &amp; serverless</span>
+                </div>
+                <div class="about-point-box">
+                  <span class="about-point-icon">🎨</span>
+                  <span class="about-point-title">Modern UI</span>
+                  <span class="about-point-desc">Glassmorphism &amp; micro-interactions</span>
+                </div>
+              </div>
+            </div>
+            <div class="about-card-glow"></div>
+          </div>
+
+          <div class="about-text">
+            <h3 style="font-size: 1.75rem; margin-bottom: 0.5rem;">Architecting Modern Software with Precision</h3>
+            <p class="about-bio">
+              I am a Full-Stack Software Engineer with a deep obsession for craft, reliability, and human-centered design. Over the past 5+ years, I have architected and scaled high-traffic SaaS systems, created interactive 3D WebGL interfaces, and designed distributed backend microservices.
+            </p>
+            <p class="about-bio">
+              My philosophy centers around writing readable, maintainable code that scales gracefully under heavy load while offering responsive, delightfully smooth interactions to every end user.
+            </p>
+
+            <ul class="about-highlights">
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Full-Stack Mastery:</strong> React, Next.js, Node.js, Python FastAPI, Go, and TypeScript.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Cloud &amp; DevOps:</strong> Docker, Kubernetes, AWS, Terraform, and CI/CD automation pipelines.</span>
+              </li>
+              <li>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"></polyline></svg>
+                <span><strong>Creative Engineering:</strong> Interactive Three.js/WebGL canvas animations and micro-interactions.</span>
+              </li>
+            </ul>
+
+            <div style="margin-top: 1rem;">
+              <a href="#contact" class="btn btn-primary">Start a Conversation</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Skills Matrix Section -->
+    <section id="skills" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Tech Stack</div>
+          <h2 class="section-title">Skills &amp; Capabilities</h2>
+          <p class="section-desc">A curated snapshot of the technologies, languages, and frameworks I leverage to deliver modern software solutions.</p>
+        </div>
+
+        <div class="skills-filter">
+          <button class="filter-btn active" data-filter="all">All Skills</button>
+          <button class="filter-btn" data-filter="frontend">Frontend &amp; UI</button>
+          <button class="filter-btn" data-filter="backend">Backend &amp; API</button>
+          <button class="filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+          <button class="filter-btn" data-filter="database">Databases &amp; Tools</button>
+        </div>
+
+        <div class="skills-grid">
+          <!-- Skill: TypeScript -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-header">
+              <div class="skill-info">
+                <div class="skill-icon">TS</div>
+                <div>
+                  <div class="skill-name">TypeScript</div>
+                  <div class="skill-category-tag">Frontend / Fullstack</div>
+                </div>
+              </div>
+              <span class="font-mono" style="font-weight: 700; color: var(--accent-cyan);">95%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-progress="95%"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Proficiency: Expert</span>
+              <span>5+ Years</span>
+            </div>
+          </div>
+
+          <!-- Skill: React / Next.js -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-header">
+              <div class="skill-info">
+                <div class="skill-icon">⚛️</div>
+                <div>
+                  <div class="skill-name">React &amp; Next.js</div>
+                  <div class="skill-category-tag">Frontend / SSR</div>
+                </div>
+              </div>
+              <span class="font-mono" style="font-weight: 700; color: var(--accent-cyan);">96%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-progress="96%"></div>
+            </div>
+            <div class="skill-footer">
+              <span>App Router &amp; SSR</span>
+              <span>5+ Years</span>
+            </div>
+          </div>
+
+          <!-- Skill: Node.js / Express -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-header">
+              <div class="skill-info">
+                <div class="skill-icon">🟢</div>
+                <div>
+                  <div class="skill-name">Node.js &amp; Express</div>
+                  <div class="skill-category-tag">Backend Services</div>
+                </div>
+              </div>
+              <span class="font-mono" style="font-weight: 700; color: var(--accent-cyan);">92%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-progress="92%"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Microservices &amp; REST</span>
+              <span>5+ Years</span>
+            </div>
+          </div>
+
+          <!-- Skill: Python / FastAPI -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-header">
+              <div class="skill-info">
+                <div class="skill-icon">🐍</div>
+                <div>
+                  <div class="skill-name">Python &amp; FastAPI</div>
+                  <div class="skill-category-tag">AI &amp; Data APIs</div>
+                </div>
+              </div>
+              <span class="font-mono" style="font-weight: 700; color: var(--accent-cyan);">90%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-progress="90%"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Async APIs &amp; ML</span>
+              <span>4+ Years</span>
+            </div>
+          </div>
+
+          <!-- Skill: Go (Golang) -->
+          <div class="skill-card" data-category="backend">
+            <div class="skill-header">
+              <div class="skill-info">
+                <div class="skill-icon">🐹</div>
+                <div>
+                  <div class="skill-name">Go (Golang)</div>
+                  <div class="skill-category-tag">High-Perf Backend</div>
+                </div>
+              </div>
+              <span class="font-mono" style="font-weight: 700; color: var(--accent-cyan);">85%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-progress="85%"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Concurrency &amp; gRPC</span>
+              <span>3+ Years</span>
+            </div>
+          </div>
+
+          <!-- Skill: Docker & Kubernetes -->
+          <div class="skill-card" data-category="cloud">
+            <div class="skill-header">
+              <div class="skill-info">
+                <div class="skill-icon">🐳</div>
+                <div>
+                  <div class="skill-name">Docker &amp; K8s</div>
+                  <div class="skill-category-tag">DevOps &amp; Containers</div>
+                </div>
+              </div>
+              <span class="font-mono" style="font-weight: 700; color: var(--accent-cyan);">88%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-progress="88%"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Cluster Orchestration</span>
+              <span>4+ Years</span>
+            </div>
+          </div>
+
+          <!-- Skill: AWS Cloud -->
+          <div class="skill-card" data-category="cloud">
+            <div class="skill-header">
+              <div class="skill-info">
+                <div class="skill-icon">☁️</div>
+                <div>
+                  <div class="skill-name">AWS Cloud Platform</div>
+                  <div class="skill-category-tag">Cloud Infrastructure</div>
+                </div>
+              </div>
+              <span class="font-mono" style="font-weight: 700; color: var(--accent-cyan);">90%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-progress="90%"></div>
+            </div>
+            <div class="skill-footer">
+              <span>ECS, Lambda, S3, RDS</span>
+              <span>4+ Years</span>
+            </div>
+          </div>
+
+          <!-- Skill: PostgreSQL & Redis -->
+          <div class="skill-card" data-category="database">
+            <div class="skill-header">
+              <div class="skill-info">
+                <div class="skill-icon">🐘</div>
+                <div>
+                  <div class="skill-name">PostgreSQL &amp; Redis</div>
+                  <div class="skill-category-tag">Database &amp; Caching</div>
+                </div>
+              </div>
+              <span class="font-mono" style="font-weight: 700; color: var(--accent-cyan);">94%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-progress="94%"></div>
+            </div>
+            <div class="skill-footer">
+              <span>Query Tuning &amp; PubSub</span>
+              <span>5+ Years</span>
+            </div>
+          </div>
+
+          <!-- Skill: Three.js & WebGL -->
+          <div class="skill-card" data-category="frontend">
+            <div class="skill-header">
+              <div class="skill-info">
+                <div class="skill-icon">🎮</div>
+                <div>
+                  <div class="skill-name">Three.js &amp; Shaders</div>
+                  <div class="skill-category-tag">3D &amp; Creative Tech</div>
+                </div>
+              </div>
+              <span class="font-mono" style="font-weight: 700; color: var(--accent-cyan);">86%</span>
+            </div>
+            <div class="skill-bar-container">
+              <div class="skill-bar" data-progress="86%"></div>
+            </div>
+            <div class="skill-footer">
+              <span>WebGL &amp; GLSL</span>
+              <span>3+ Years</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Featured Projects Section -->
+    <section id="projects">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Featured Works</div>
+          <h2 class="section-title">Selected Projects</h2>
+          <p class="section-desc">A showcase of production-ready applications, open source tools, and interactive digital experiences.</p>
+        </div>
+
+        <div class="projects-filter">
+          <button class="filter-btn active" data-filter="all">All Projects</button>
+          <button class="filter-btn" data-filter="fullstack">Full Stack &amp; AI</button>
+          <button class="filter-btn" data-filter="fintech">Fintech &amp; Web3</button>
+          <button class="filter-btn" data-filter="creative">Creative 3D / UI</button>
+          <button class="filter-btn" data-filter="cloud">Cloud &amp; DevOps</button>
+        </div>
+
+        <div class="projects-grid">
+          <!-- Project 1: Aurora AI -->
+          <article class="project-card" data-category="fullstack">
+            <div class="project-thumb">
+              <img src="assets/project_ai_saas.jpg" alt="Aurora AI Dashboard Screenshot" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal-btn" data-project-id="project-1">Quick View</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag-badge">React</span>
+                <span class="tag-badge">FastAPI</span>
+                <span class="tag-badge">PyTorch</span>
+                <span class="tag-badge">PostgreSQL</span>
+              </div>
+              <h3 class="project-title">Aurora AI | Predictive SaaS Analytics</h3>
+              <p class="project-desc">
+                Enterprise real-time predictive analytics dashboard aggregating multi-tenant telemetry with sub-15ms stream metrics and automated AI anomaly diagnostics.
+              </p>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project-id="project-1">View Details</button>
+                <div class="project-links">
+                  <a href="https://github.com/dukeflores-dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                  <a href="#" class="icon-link open-modal-btn" data-project-id="project-1" aria-label="Live Demo Link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 2: NexusPay -->
+          <article class="project-card" data-category="fintech">
+            <div class="project-thumb">
+              <img src="assets/project_fintech.svg" alt="NexusPay Crypto Gateway Interface" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal-btn" data-project-id="project-2">Quick View</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag-badge">Next.js</span>
+                <span class="tag-badge">Go</span>
+                <span class="tag-badge">Solidity</span>
+                <span class="tag-badge">Redis</span>
+              </div>
+              <h3 class="project-title">NexusPay | Crypto &amp; Fiat Settlement Gateway</h3>
+              <p class="project-desc">
+                High-frequency institutional settlement gateway unifying EVM smart contracts with automated ACH/SWIFT rails and dynamic transaction gas optimization.
+              </p>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project-id="project-2">View Details</button>
+                <div class="project-links">
+                  <a href="https://github.com/dukeflores-dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                  <a href="#" class="icon-link open-modal-btn" data-project-id="project-2" aria-label="Live Demo Link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 3: CyberPulse 3D -->
+          <article class="project-card" data-category="creative">
+            <div class="project-thumb">
+              <img src="assets/project_ecommerce.svg" alt="CyberPulse 3D Studio Preview" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal-btn" data-project-id="project-3">Quick View</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag-badge">Three.js</span>
+                <span class="tag-badge">GLSL Shaders</span>
+                <span class="tag-badge">Vue 3</span>
+                <span class="tag-badge">GSAP</span>
+              </div>
+              <h3 class="project-title">CyberPulse | 3D Spatial E-Commerce Studio</h3>
+              <p class="project-desc">
+                Immersive WebGL 3D product customizer with dynamic physically-based lighting, custom shader holographic effects, and 60 FPS mobile performance.
+              </p>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project-id="project-3">View Details</button>
+                <div class="project-links">
+                  <a href="https://github.com/dukeflores-dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                  <a href="#" class="icon-link open-modal-btn" data-project-id="project-3" aria-label="Live Demo Link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+
+          <!-- Project 4: MeshOps -->
+          <article class="project-card" data-category="cloud">
+            <div class="project-thumb">
+              <img src="assets/project_cloud.svg" alt="MeshOps Kubernetes Orchestrator Preview" loading="lazy">
+              <div class="project-overlay">
+                <button class="btn btn-primary btn-sm open-modal-btn" data-project-id="project-4">Quick View</button>
+              </div>
+            </div>
+            <div class="project-body">
+              <div class="project-tags">
+                <span class="tag-badge">Go</span>
+                <span class="tag-badge">Kubernetes</span>
+                <span class="tag-badge">gRPC</span>
+                <span class="tag-badge">Prometheus</span>
+              </div>
+              <h3 class="project-title">MeshOps | Kubernetes Cloud Mesh Orchestrator</h3>
+              <p class="project-desc">
+                High-availability distributed cluster controller orchestrating automated canary traffic rollbacks, eBPF network telemetry, and auto-scaling policies.
+              </p>
+              <div class="project-footer">
+                <button class="btn btn-outline btn-sm open-modal-btn" data-project-id="project-4">View Details</button>
+                <div class="project-links">
+                  <a href="https://github.com/dukeflores-dev" target="_blank" rel="noopener noreferrer" class="icon-link" aria-label="GitHub Repository">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+                  </a>
+                  <a href="#" class="icon-link open-modal-btn" data-project-id="project-4" aria-label="Live Demo Link">
+                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <!-- Experience & Education Timeline -->
+    <section id="experience" style="background: var(--bg-secondary);">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Career Path</div>
+          <h2 class="section-title">Experience &amp; Milestones</h2>
+          <p class="section-desc">A timeline of my professional roles, engineering contributions, and key career achievements.</p>
+        </div>
+
+        <div class="timeline-container">
+          <!-- Item 1 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">2023 — PRESENT</span>
+              <h3 class="timeline-title">Lead Full-Stack &amp; Cloud Architect</h3>
+              <div class="timeline-company">OmniCloud Solutions • Senior Role</div>
+              <p class="timeline-desc">
+                Leading the core architecture for a multi-tenant cloud data platform handling 25M+ daily requests. Mentoring 8 engineers and reducing system latency by 42%.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 2 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">2021 — 2023</span>
+              <h3 class="timeline-title">Senior Full-Stack Engineer</h3>
+              <div class="timeline-company">Vanguard Tech Labs • Full-Time</div>
+              <p class="timeline-desc">
+                Engineered high-frequency fintech analytics dashboards with Next.js, Go microservices, and WebSockets. Achieved 99.99% service uptime across cloud regions.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 3 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">2019 — 2021</span>
+              <h3 class="timeline-title">Software Engineer (UI/UX &amp; Web)</h3>
+              <div class="timeline-company">PixelCraft Digital Agency • Full-Time</div>
+              <p class="timeline-desc">
+                Built interactive consumer applications, custom WebGL visualizers, and headless e-commerce storefronts for global enterprise clients.
+              </p>
+            </div>
+          </div>
+
+          <!-- Item 4 -->
+          <div class="timeline-item">
+            <div class="timeline-dot"></div>
+            <div class="timeline-card">
+              <span class="timeline-date">2015 — 2019</span>
+              <h3 class="timeline-title">B.S. in Computer Science</h3>
+              <div class="timeline-company">University of Technology • Honors Graduate</div>
+              <p class="timeline-desc">
+                Graduated with Magna Cum Laude honors. Specialized in Distributed Systems, Algorithms, and Human-Computer Interaction (HCI).
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Interactive Contact Section -->
+    <section id="contact">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-tag">Get in Touch</div>
+          <h2 class="section-title">Let's Build Something Extraordinary</h2>
+          <p class="section-desc">Have a visionary project in mind or looking for an experienced software engineer to elevate your team? Let's connect.</p>
+        </div>
+
+        <div class="contact-grid">
+          <!-- Left: Contact Details -->
+          <div class="contact-info-list">
+            <div class="contact-card">
+              <div class="contact-icon">📧</div>
+              <div>
+                <div class="contact-detail-title">Direct Email</div>
+                <a href="mailto:dukeflores.dev@gmail.com" class="contact-detail-value">dukeflores.dev@gmail.com</a>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">📍</div>
+              <div>
+                <div class="contact-detail-title">Location &amp; Availability</div>
+                <div class="contact-detail-value">Worldwide / Remote Available</div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">💼</div>
+              <div>
+                <div class="contact-detail-title">Collaboration Type</div>
+                <div class="contact-detail-value">Full-Time / Advisory / Contract</div>
+              </div>
+            </div>
+
+            <div class="contact-card">
+              <div class="contact-icon">⚡</div>
+              <div>
+                <div class="contact-detail-title">Response SLA</div>
+                <div class="contact-detail-value">Within 24 Business Hours</div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Right: Contact Form -->
+          <div class="contact-form-card">
+            <form id="contact-form" autocomplete="off">
+              <div class="form-group">
+                <label for="form-name" class="form-label">Your Name</label>
+                <input type="text" id="form-name" name="name" class="form-input" placeholder="e.g. Sarah Connor" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-email" class="form-label">Your Email Address</label>
+                <input type="email" id="form-email" name="email" class="form-input" placeholder="name@domain.com" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-subject" class="form-label">Project / Discussion Topic</label>
+                <input type="text" id="form-subject" name="subject" class="form-input" placeholder="e.g. New SaaS Platform Architecture" required>
+              </div>
+
+              <div class="form-group">
+                <label for="form-message" class="form-label">Message Details</label>
+                <textarea id="form-message" name="message" class="form-textarea" placeholder="Tell me about your goals, timelines, and technical requirements..." required></textarea>
+              </div>
+
+              <button type="submit" class="btn btn-primary" id="submit-btn" style="width: 100%;">
+                <span>Send Message</span>
+                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                  <line x1="22" y1="2" x2="11" y2="13"></line>
+                  <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                </svg>
+              </button>
+
+              <div class="form-feedback" id="form-feedback"></div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- Project Detail Modal Dialog -->
+  <div class="modal-backdrop" id="project-modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+    <div class="modal-content">
+      <button class="modal-close-btn" id="modal-close-btn" aria-label="Close Project Modal">✕</button>
+      <div class="modal-media">
+        <img id="modal-img" src="" alt="Project Showcase Image">
+      </div>
+      <div class="modal-body">
+        <h3 id="modal-title" style="font-size: 1.5rem;">Project Title</h3>
+        <div id="modal-tags" class="project-tags"></div>
+        <p id="modal-desc" style="line-height: 1.7; font-size: 1rem;"></p>
+        
+        <h4 style="margin-top: 0.5rem; font-size: 1.1rem; color: var(--accent-cyan);">Architecture &amp; Core Highlights</h4>
+        <div id="modal-features" class="modal-features"></div>
+
+        <div style="display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap;">
+          <a id="modal-demo-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-primary btn-sm">
+            <span>Live Interactive Demo</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path><polyline points="15 3 21 3 21 9"></polyline><line x1="10" y1="14" x2="21" y2="3"></line></svg>
+          </a>
+          <a id="modal-code-link" href="#" target="_blank" rel="noopener noreferrer" class="btn btn-secondary btn-sm">
+            <span>View Source Repository</span>
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22"></path></svg>
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Toast Notification Container -->
+  <div class="toast-container" id="toast-container" aria-live="polite"></div>
+
+  <!-- Back to Top Button -->
+  <button class="back-to-top-btn" id="back-to-top" aria-label="Scroll Back to Top" title="Back to Top">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5">
+      <line x1="12" y1="19" x2="12" y2="5"></line>
+      <polyline points="5 12 12 5 19 12"></polyline>
+    </svg>
+  </button>
+
+  <!-- Footer -->
+  <footer class="footer">
+    <div class="container footer-content">
+      <div class="footer-links">
+        <a href="#hero" class="footer-link">Home</a>
+        <a href="#about" class="footer-link">About</a>
+        <a href="#skills" class="footer-link">Skills</a>
+        <a href="#projects" class="footer-link">Projects</a>
+        <a href="#experience" class="footer-link">Experience</a>
+        <a href="#contact" class="footer-link">Contact</a>
+      </div>
+
+      <div class="footer-copy">
+        &copy; <span id="current-year"></span> Duke Flores. Designed and engineered with semantic HTML5, Vanilla CSS3 &amp; ES6+ JavaScript.
+      </div>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/main.js"></script>
+</body>
+</html>

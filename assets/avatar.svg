@@ -1,0 +1,47 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 400" width="100%" height="100%">
+  <defs>
+    <linearGradient id="avatarBg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a"/>
+      <stop offset="50%" stop-color="#1e293b"/>
+      <stop offset="100%" stop-color="#090d16"/>
+    </linearGradient>
+    <linearGradient id="neonCyanPurple" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#00f2fe"/>
+      <stop offset="100%" stop-color="#8b5cf6"/>
+    </linearGradient>
+    <filter id="avatarGlow" x="-20%" y="-20%" width="140%" height="140%">
+      <feGaussianBlur stdDeviation="6" result="blur"/>
+      <feComposite in="SourceGraphic" in2="blur" operator="over"/>
+    </filter>
+  </defs>
+
+  <!-- Background circle -->
+  <circle cx="200" cy="200" r="190" fill="url(#avatarBg)" stroke="url(#neonCyanPurple)" stroke-width="4"/>
+  <circle cx="200" cy="200" r="175" fill="none" stroke="rgba(0, 242, 254, 0.25)" stroke-width="1" stroke-dasharray="8,6"/>
+
+  <!-- Stylized Developer Silhouette -->
+  <!-- Body/Shoulders -->
+  <path d="M 100 350 C 100 280, 140 260, 200 260 C 260 260, 300 280, 300 350 Z" fill="#1e293b" stroke="#334155" stroke-width="2"/>
+  <path d="M 150 260 L 200 310 L 250 260" fill="none" stroke="url(#neonCyanPurple)" stroke-width="3"/>
+
+  <!-- Head / Face -->
+  <ellipse cx="200" cy="180" rx="65" ry="75" fill="#334155" stroke="rgba(255,255,255,0.1)" stroke-width="1.5"/>
+  
+  <!-- Cyber Glasses / Visor -->
+  <rect x="150" y="155" width="100" height="26" rx="8" fill="#070b14" stroke="url(#neonCyanPurple)" stroke-width="2.5" filter="url(#avatarGlow)"/>
+  <line x1="160" y1="168" x2="240" y2="168" stroke="#00f2fe" stroke-width="2"/>
+  <circle cx="175" cy="168" r="3" fill="#00f2fe"/>
+  <circle cx="225" cy="168" r="3" fill="#8b5cf6"/>
+
+  <!-- Hair / Headset -->
+  <path d="M 130 160 C 130 110, 160 100, 200 100 C 240 100, 270 110, 270 160" fill="none" stroke="#64748b" stroke-width="14" stroke-linecap="round"/>
+  <!-- Headset Earcups -->
+  <rect x="125" y="160" width="14" height="32" rx="6" fill="#00f2fe" filter="url(#avatarGlow)"/>
+  <rect x="261" y="160" width="14" height="32" rx="6" fill="#8b5cf6" filter="url(#avatarGlow)"/>
+
+  <!-- Floating Code particles -->
+  <text x="75" y="110" fill="#00f2fe" font-size="18" font-family="monospace" opacity="0.7">&lt;/&gt;</text>
+  <text x="310" y="130" fill="#8b5cf6" font-size="18" font-family="monospace" opacity="0.7">{ }</text>
+  <text x="60" y="270" fill="#10b981" font-size="16" font-family="monospace" opacity="0.6">⚡</text>
+  <text x="320" y="260" fill="#f43f5e" font-size="16" font-family="monospace" opacity="0.6">λ</text>
+</svg>
