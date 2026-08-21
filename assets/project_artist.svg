@@ -1,0 +1,14 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Artist development and expression</title>
+  <desc id="desc">An expressive abstract portrait with musical notes and colorful shapes.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#31152d"/><stop offset="1" stop-color="#733c32"/></linearGradient></defs>
+  <rect width="800" height="520" fill="url(#bg)"/>
+  <circle cx="300" cy="245" r="128" fill="#ffca68" opacity=".2"/>
+  <path d="M0 440 Q260 370 500 430 T800 400 V520 H0Z" fill="#170e1b"/>
+  <path d="M310 360 C250 320 256 225 330 190 C374 169 427 195 441 242 C454 285 432 347 390 375Z" fill="#ff6f61"/>
+  <path d="M336 204 Q379 150 425 206" fill="none" stroke="#fff0c7" stroke-width="18" stroke-linecap="round"/>
+  <circle cx="350" cy="254" r="8" fill="#26152b"/><circle cx="408" cy="254" r="8" fill="#26152b"/>
+  <path d="M355 306 Q380 327 408 304" fill="none" stroke="#26152b" stroke-width="8" stroke-linecap="round"/>
+  <g fill="#55d6be"><path d="M584 132 h18 v86 h-18z"/><circle cx="592" cy="226" r="28"/><path d="M652 190 h18 v86 h-18z"/><circle cx="660" cy="284" r="28"/></g>
+  <text x="54" y="464" fill="#fff0c7" font-family="sans-serif" font-size="25" font-weight="700" letter-spacing="4">ARTIST EXPRESSION</text>
+</svg>

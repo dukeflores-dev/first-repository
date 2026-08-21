@@ -401,7 +401,7 @@ const projectData = {
   'project-1': {
     title: '6ixth-Bit | Lead Guitar & Band Leadership',
     category: 'Guitar',
-    image: 'assets/project_ai_saas.jpg',
+    image: 'assets/project_guitar.svg',
     tags: ['Lead Guitar', 'Songwriting', 'Live Performance', 'Band Leadership'],
     description: 'An outside band project where I contribute as lead guitarist and second leader, helping shape the group\'s sound, direction, and live performances.',
     features: [
@@ -416,7 +416,7 @@ const projectData = {
   'project-2': {
     title: 'Church Music Ministry | Multi-Instrumental Service',
     category: 'Ensemble',
-    image: 'assets/project_fintech.svg',
+    image: 'assets/project_ensemble.svg',
     tags: ['Guitar', 'Piano', 'Bass', 'Drums'],
     description: 'Serving as a multi-instrumentalist at Jesus is Lord Church, supporting worship services through adaptable playing, teamwork, and a strong sense of musical timing.',
     features: [
@@ -431,7 +431,7 @@ const projectData = {
   'project-3': {
     title: 'VIA, JAM & SCOM | Creative Music Leadership',
     category: 'Leadership',
-    image: 'assets/project_ecommerce.svg',
+    image: 'assets/project_leadership.svg',
     tags: ['Mentoring', 'Team Direction', 'Rehearsal Planning', 'Communication'],
     description: 'As assistant head of VIA, JAM, and SCOM, I help guide music teams, mentor instrumentalists, and build a collaborative environment for confident and expressive performances.',
     features: [
@@ -446,7 +446,7 @@ const projectData = {
   'project-4': {
     title: 'Artist Development | Sound, Vision & Expression',
     category: 'Artist',
-    image: 'assets/project_cloud.svg',
+    image: 'assets/project_artist.svg',
     tags: ['Creative Direction', 'Stage Presence', 'Arrangement', 'Expression'],
     description: 'Developing a personal artistic voice through arrangement, performance, and visual expression while helping each musical project communicate its own identity.',
     features: [

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Music team leadership</title>
+  <desc id="desc">A stage illustration showing a music leader guiding a creative team.</desc>
+  <defs><linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#21152f"/><stop offset="1" stop-color="#163e52"/></linearGradient></defs>
+  <rect width="800" height="520" fill="url(#bg)"/>
+  <path d="M0 430 Q220 370 410 430 T800 410 V520 H0Z" fill="#0b101e"/>
+  <path d="M400 92 L432 160 H505 L446 202 L468 272 L400 230 L332 272 L354 202 L295 160 H368Z" fill="#ffca68"/>
+  <g fill="#55d6be"><circle cx="180" cy="250" r="27"/><circle cx="620" cy="250" r="27"/><circle cx="270" cy="340" r="27"/><circle cx="530" cy="340" r="27"/></g>
+  <g stroke="#55d6be" stroke-width="10" stroke-linecap="round"><path d="M180 282 V410"/><path d="M620 282 V410"/><path d="M270 372 V440"/><path d="M530 372 V440"/></g>
+  <path d="M400 230 V430" stroke="#ff6f61" stroke-width="15" stroke-linecap="round"/>
+  <path d="M400 270 L325 320 M400 270 L475 320" stroke="#ff6f61" stroke-width="10" stroke-linecap="round"/>
+  <text x="54" y="464" fill="#fff2d0" font-family="sans-serif" font-size="25" font-weight="700" letter-spacing="4">MUSIC LEADERSHIP</text>
+</svg>

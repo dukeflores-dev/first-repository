@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Electric guitar performance</title>
+  <desc id="desc">A warm stage illustration of an electric guitar and amplifier.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0" x2="1" y1="0" y2="1"><stop stop-color="#15102b"/><stop offset="1" stop-color="#49203f"/></linearGradient>
+    <linearGradient id="wood" x1="0" x2="1"><stop stop-color="#ff8b4a"/><stop offset="1" stop-color="#d83b58"/></linearGradient>
+  </defs>
+  <rect width="800" height="520" fill="url(#bg)"/>
+  <circle cx="150" cy="110" r="84" fill="#ffbd59" opacity=".14"/>
+  <circle cx="665" cy="86" r="120" fill="#55d6be" opacity=".1"/>
+  <path d="M0 426 Q220 370 420 430 T800 408 V520 H0Z" fill="#0b0a18"/>
+  <rect x="535" y="270" width="150" height="125" rx="10" fill="#171827" stroke="#ffbd59" stroke-width="4"/>
+  <circle cx="610" cy="330" r="38" fill="#0b0a18" stroke="#55d6be" stroke-width="5"/>
+  <path d="M255 375 C208 340 225 275 286 282 C320 286 340 316 364 321 C391 326 410 298 438 306 C486 320 477 380 432 400 C393 417 355 390 323 400 C296 409 272 396 255 375Z" fill="url(#wood)" stroke="#ffc46b" stroke-width="5"/>
+  <path d="M315 330 L515 176" stroke="#f6d59a" stroke-width="25" stroke-linecap="round"/>
+  <path d="M300 336 L515 176" stroke="#fff1cf" stroke-width="3"/>
+  <path d="M505 163 L548 132" stroke="#ffc46b" stroke-width="12" stroke-linecap="round"/>
+  <path d="M287 302 Q326 343 359 350" fill="none" stroke="#201326" stroke-width="8"/>
+  <text x="54" y="464" fill="#fff1cf" font-family="sans-serif" font-size="25" font-weight="700" letter-spacing="4">LEAD GUITAR</text>
+</svg>

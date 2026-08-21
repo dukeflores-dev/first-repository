@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 520" role="img" aria-labelledby="title desc">
+  <title id="title">Live music ensemble</title>
+  <desc id="desc">A colorful illustration of musicians performing together on stage.</desc>
+  <defs><linearGradient id="bg" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#0e2635"/><stop offset="1" stop-color="#0f5b61"/></linearGradient></defs>
+  <rect width="800" height="520" fill="url(#bg)"/>
+  <circle cx="400" cy="170" r="125" fill="#ffca68" opacity=".14"/>
+  <path d="M0 430 Q200 380 400 430 T800 420 V520 H0Z" fill="#07151e"/>
+  <g stroke="#ffca68" stroke-width="8" stroke-linecap="round" fill="none">
+    <path d="M210 370 V245 M180 300 H240"/><path d="M400 370 V210 M365 270 H435"/><path d="M590 370 V248 M560 302 H620"/>
+  </g>
+  <g fill="#f26f61"><circle cx="210" cy="205" r="32"/><path d="M178 241 Q210 222 242 241 L264 382 H156Z"/></g>
+  <g fill="#55d6be"><circle cx="400" cy="170" r="32"/><path d="M368 207 Q400 188 432 207 L458 382 H342Z"/></g>
+  <g fill="#8e9cff"><circle cx="590" cy="208" r="32"/><path d="M558 244 Q590 225 622 244 L645 382 H535Z"/></g>
+  <text x="54" y="464" fill="#e9fff8" font-family="sans-serif" font-size="25" font-weight="700" letter-spacing="4">MULTI-INSTRUMENTAL</text>
+</svg>
