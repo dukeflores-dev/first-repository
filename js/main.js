@@ -399,64 +399,64 @@ function initSkillsFilter() {
    ========================================================================== */
 const projectData = {
   'project-1': {
-    title: 'Aurora AI | Predictive SaaS Analytics',
-    category: 'Full Stack & AI',
+    title: '6ixth-Bit | Lead Guitar & Band Leadership',
+    category: 'Guitar',
     image: 'assets/project_ai_saas.jpg',
-    tags: ['React', 'TypeScript', 'Python FastAPI', 'PyTorch', 'Tailwind', 'PostgreSQL'],
-    description: 'An enterprise-grade real-time AI intelligence platform that aggregates multi-tenant application telemetry, computes predictive churn & anomaly detection models with 96.4% confidence intervals, and visualizes complex telemetry data in low-latency WebGL charts.',
+    tags: ['Lead Guitar', 'Songwriting', 'Live Performance', 'Band Leadership'],
+    description: 'An outside band project where I contribute as lead guitarist and second leader, helping shape the group\'s sound, direction, and live performances.',
     features: [
-      '⚡ Sub-15ms real-time metric stream processing',
-      '🤖 Integrated LLM-driven anomaly diagnosis & summaries',
-      '🔒 SOC2 Type II compliant RBAC authentication',
-      '📊 Interactive drill-down metric dashboards with custom exports'
+      '🎸 Lead and rhythm guitar performance',
+      '🎼 Collaborative songwriting and arrangement',
+      '🎤 Live performance preparation and stage presence',
+      '🧭 Creative direction as second leader'
     ],
-    demoUrl: 'https://aurora-ai-demo.example.com',
-    codeUrl: 'https://github.com/dukeflores-dev/aurora-ai-analytics'
+    demoUrl: '#projects',
+    codeUrl: 'https://github.com/dukeflores-dev'
   },
   'project-2': {
-    title: 'NexusPay | Next-Gen Crypto & Fiat Gateway',
-    category: 'Fintech & Web3',
+    title: 'Church Music Ministry | Multi-Instrumental Service',
+    category: 'Ensemble',
     image: 'assets/project_fintech.svg',
-    tags: ['Next.js', 'Solidity', 'Go (Golang)', 'Ethers.js', 'TailwindCSS', 'Redis'],
-    description: 'High-frequency institutional settlement gateway unifying multichain EVM smart contracts with traditional SWIFT and ACH payment rails. Includes multi-signature treasury security, automated gas optimization, and institutional ledger auditing.',
+    tags: ['Guitar', 'Piano', 'Bass', 'Drums'],
+    description: 'Serving as a multi-instrumentalist at Jesus is Lord Church, supporting worship services through adaptable playing, teamwork, and a strong sense of musical timing.',
     features: [
-      '🛡️ Multi-sig automated vault contract security',
-      '🔄 Dynamic gas routing saving ~32% on transaction fees',
-      '📈 Real-time exchange rate websocket feeds',
-      '📱 PWA ready with biometrics and hardware wallet support'
+      '🎹 Piano accompaniment and harmonic support',
+      '🎸 Guitar, bass, and drum performance',
+      '🤝 Flexible collaboration within a live ensemble',
+      '⏱️ Consistent timing and musical responsiveness'
     ],
-    demoUrl: 'https://nexuspay-demo.example.com',
-    codeUrl: 'https://github.com/dukeflores-dev/nexuspay-gateway'
+    demoUrl: '#projects',
+    codeUrl: 'https://github.com/dukeflores-dev'
   },
   'project-3': {
-    title: 'CyberPulse | 3D Spatial E-Commerce Studio',
-    category: 'Creative Tech & UI/UX',
+    title: 'VIA, JAM & SCOM | Creative Music Leadership',
+    category: 'Leadership',
     image: 'assets/project_ecommerce.svg',
-    tags: ['Three.js', 'GLSL Shaders', 'WebGL', 'Vue 3', 'GSAP', 'Pinia'],
-    description: 'An immersive 3D interactive product customizer featuring physically-based rendering (PBR), dynamic lighting shaders, and smooth GSAP cinematic camera transitions for next-generation virtual luxury shopping.',
+    tags: ['Mentoring', 'Team Direction', 'Rehearsal Planning', 'Communication'],
+    description: 'As assistant head of VIA, JAM, and SCOM, I help guide music teams, mentor instrumentalists, and build a collaborative environment for confident and expressive performances.',
     features: [
-      '🎮 60 FPS interactive 3D model customization and inspection',
-      '✨ Custom GLSL holographic & reflection shaders',
-      '🛒 Seamless cart sync with Headless Shopify Storefront API',
-      '📱 Optimized low-poly LOD models for mobile devices'
+      '🎓 Mentoring developing musicians',
+      '📋 Coordinating rehearsals and team preparation',
+      '🗣️ Clear communication across music teams',
+      '🌱 Encouraging confidence and creative growth'
     ],
-    demoUrl: 'https://cyberpulse-3d.example.com',
-    codeUrl: 'https://github.com/dukeflores-dev/cyberpulse-3d-studio'
+    demoUrl: '#projects',
+    codeUrl: 'https://github.com/dukeflores-dev'
   },
   'project-4': {
-    title: 'MeshOps | Kubernetes Cloud Mesh Orchestrator',
-    category: 'Cloud & DevOps',
+    title: 'Artist Development | Sound, Vision & Expression',
+    category: 'Artist',
     image: 'assets/project_cloud.svg',
-    tags: ['Go', 'Kubernetes', 'gRPC', 'Docker', 'Prometheus', 'Grafana'],
-    description: 'Distributed cloud observability & canary deployment controller for high-load microservice clusters. Automatically manages traffic mirroring, dynamic auto-scaling pods, and zero-downtime blue/green deployments.',
+    tags: ['Creative Direction', 'Stage Presence', 'Arrangement', 'Expression'],
+    description: 'Developing a personal artistic voice through arrangement, performance, and visual expression while helping each musical project communicate its own identity.',
     features: [
-      '🌐 Dynamic Istio service mesh traffic balancing & failover',
-      '⏱️ Automated canary rollback on P99 latency spikes',
-      '📊 Native Prometheus metric exporter and real-time alerts',
-      '🔒 eBPF-based network topology visualization'
+      '🎨 Building a recognizable artistic identity',
+      '🎼 Shaping arrangements around the story of a song',
+      '🎤 Developing expressive stage presence',
+      '✨ Connecting sound, vision, and emotion'
     ],
-    demoUrl: 'https://meshops-demo.example.com',
-    codeUrl: 'https://github.com/dukeflores-dev/meshops-cloud-orchestrator'
+    demoUrl: '#projects',
+    codeUrl: 'https://github.com/dukeflores-dev'
   }
 };
 
