@@ -544,16 +544,6 @@ function initContactForm() {
   const form = document.getElementById('contact-form');
   const submitBtn = document.getElementById('submit-btn');
 
-  // Update Database status indicator
-  const dbStatusText = document.getElementById('db-status-text');
-  if (dbStatusText && window.dbService) {
-    if (window.dbService.isCloudEnabled) {
-      dbStatusText.textContent = 'Database: Supabase Cloud (Live)';
-    } else {
-      dbStatusText.textContent = 'Database: Local & Cloud Ready';
-    }
-  }
-
   form?.addEventListener('submit', async (e) => {
     e.preventDefault();
 
